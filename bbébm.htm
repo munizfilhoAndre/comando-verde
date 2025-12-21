@@ -1,0 +1,53 @@
+<html> 
+<head>
+<title>Bandido Bom é bandido morto</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="black">
+<link rel="icon" href="5Lhs.gif" type="image/gif">
+      <style>
+        body {
+          background-color: black;
+          display: flex;
+          flex-direction: column; /* Empilha os itens na vertical */
+          min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+        }
+        .conteudo-principal {
+          flex-grow: 1; /* Ocupa o espaço restante, empurrando a imagem para baixo */
+        }
+        footer {
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: flex-end;   /* Alinha o conteúdo na parte inferior do container */
+  position: fixed;         /* Fixa o container na tela */
+  bottom: 0;               /* Coloca o container na parte inferior da tela */
+  width: 100%;             /* Garante que o container tenha a largura total */
+  padding: 20px;
+  text-align: center;
+  margin: 0;               /* Remove qualquer margem externa */
+}
+
+
+  .parallax {
+  /* The image used */
+  background-image: url("5Lhs.gif");
+    min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+      </style>
+    </head>
+    <body style="background-color:black;" class="parallax">
+<a href="index.html">↖️</a>
+      <div class="conteudo-principal">
+        <h2 style="color:yellow; text-align:center;">Bandido Bom é bandido morto</h2>
+      </div>
+      <footer>
+        <img src="traz.png" alt="Homem de traz">
+      </footer>
+    </body>
+</html>

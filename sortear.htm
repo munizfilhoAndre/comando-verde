@@ -1,0 +1,228 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="icon" href="ico.png" type="image/png">
+<title>Sortear vagabundo</title>
+</head>
+<style>
+  .quebra-linha {
+    white-space: pre-line;
+  }
+body {
+background-image: url('troll.png');
+  background-color: #000a00;
+color: white;
+}
+h2{
+color: orange;
+}
+a{
+color: lightblue;
+}
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 1px 0;
+  text-align: center;
+  z-index: 500; /* Garante que o header fique acima de outros elementos */
+}
+input {
+  width: 50px;
+  height: 20px;
+}
+/* General button style */
+.btn {
+  border: none;
+  font-family: 'Lato';
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 25px 80px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+.btn:before {
+  font-family: 'FontAwesome';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* Icon separator */
+.btn-sep {
+  padding: 25px 60px 25px 120px;
+}
+
+.btn-sep:before {
+  background: rgba(0,0,0,0.15);
+}
+.btn-2 {
+  background: #2ecc71;
+  color: #fff;
+}
+
+.btn-2:hover {
+  background: #27ae60;
+}
+
+.btn-2:active {
+  background: #27ae60;
+  top: 2px;
+}
+
+.btn-2:before {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  line-height: 3;
+  font-size: 140%;
+  width: 60px;
+}
+.icon-cart:before {
+  content: "\f07a";
+}
+    .footer {
+      color: red;
+      text-align: center;
+      border-top: 2px solid #ffffff;
+      margin-top: 20px;
+      padding-top: 10px;
+      font-weight: bold;
+    }
+nav{
+button {
+color:white;
+background-color:green;
+}
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+color:yellow;
+}
+  </style>
+</head>
+<body>
+<header>
+<div style="display: flex; justify-content: space-between; width: 100%; background-color: green; padding: 8px;">
+  <p style="text-align: left; margin: 0;">comando verde</p>
+  <p style="text-align: right; margin: 0;">comando verde</p>
+</div>
+<nav>
+<a href="alvos.htm"><button>voltar</button></a>
+<a href="index.html"><button>inicio</button></a>
+</nav>
+</header>
+
+<body>
+<h1>Sorteie um vagabundo</h1>
+
+<p>
+  Entre com o valor minimo 
+  <input type="number" id="minimo">
+</p>
+
+<p>
+  Entre com o valor maximo 
+  <input type="number" id="maximo">
+</p>
+
+<button class="btn btn-2 btn-sep icon-cart" onclick="sorteio()">Sortear</button>
+<center>
+</p><h2 id="resultado">( )</h2>
+</center>
+<script>
+function sorteio() {
+
+  const min = parseInt(document.getElementById("minimo").value);
+  const max = parseInt(document.getElementById("maximo").value);
+
+  // Gera número aleatório entre min e max (inclusive)
+  const sort = Math.floor(Math.random() * (max - min + 1)) + min;
+
+  document.getElementById("resultado").innerHTML = sort;
+}
+</script>
+
+<table>
+ <tr>
+    <th>n°</th>
+    <th>Alvos</th>
+    <th>Media</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Doca</td>
+    <td>100%</td>
+  </tr>
+<tr>
+    <td>2</td>
+    <td>Sardinha</td>
+    <td>96%</td>
+  </tr>
+<tr>
+    <td>3</td>
+    <td>Pézão</td>
+    <td>91,25%</td>
+  </tr>
+<tr>
+    <td>4</td>
+    <td>Penelope</td>
+    <td>81,5%</td>
+  </tr>
+<tr>
+    <td>5</td>
+    <td>Abelha</td>
+    <td>86%</td>
+  </tr>
+<tr>
+    <td>6</td>
+    <td>Pedro Bala</td>
+    <td>85,5%</td>
+  </tr>
+<tr>
+    <td>7</td>
+    <td>Gadernal</td>
+    <td>96,25%</td>
+  </tr>
+<tr>
+    <td>8</td>
+    <td>BMW</td>
+    <td>91,25 %</td>
+  </tr>
+</table>
+</body>
+</html>

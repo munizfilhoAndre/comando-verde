@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="theme-color" content="lightgreen">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="icon" href="ico.png" type="image/png">
+<title>Aliados do Verde</title>
+<style>
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #000a00;
+background-image: url('fundo.png');
+  }
+
+
+/* Container que envolve os itens */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+
+/* Cada item (link com figure) */
+.container a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Aparência das figuras */
+figure {
+  margin: 0;
+  background: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s;
+}
+
+figure:hover {
+  transform: scale(1.03);
+}
+
+/* Imagens ajustáveis */
+figure img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Legenda */
+figcaption {
+  text-align: center;
+  padding: 8px;
+  font-weight: bold;
+}
+  nav{
+text-align: center;
+}
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 1px 0;
+  text-align: center;
+  z-index: 500; /* Garante que o header fique acima de outros elementos */
+}
+nav{
+button {
+color:white;
+background-color:green;
+}
+}
+</style>
+</head>
+<body>
+<header>
+<div style="display: flex; justify-content: space-between; width: 100%; background-color: green; padding: 8px;">
+  <p style="text-align: left; margin: 0; color:white;">comando verde</p>
+  <p style="text-align: center; margin: 0; color:yellow;">Aliados</p>
+  <p style="text-align: right; margin: 0; color:white;">comando verde</p>
+</div>
+<nav>
+<a href="index.html"><button>Inicio</button></a>
+<a href="alvos.htm"><button>Alvos</button></a>
+<a href="pegos.htm"><button>Pegos☠️</button></a>
+</nav>
+</header>
+<div class="container">
+  <a href="aliados/aliado-1.htm">
+    <figure>
+      <img src="https://conectas.org/wp-content/uploads/2020/08/720_rio.jpg">
+      <figcaption>Operações policiais</figcaption>
+    </figure>
+  </a>
+
+  <a href="aliados/aliado-2.htm">
+    <figure>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnxKtOSfyq5PAa4KU4DKMNyOrYTezxA32Tmw8lTUVZYg&s=10">
+      <figcaption>Eu mesmo</figcaption>
+    </figure>
+  </a>
+
+  <a href="aliados/aliado-3.htm">
+    <figure>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvzVne6IOH-OzVdFqWXe-U4uk8v5ImV9CHYSCv4LStNw&s=10">
+      <figcaption>Xandão de Moraes</figcaption>
+    </figure>
+  </a>
+<!--
+  <a href="aliados/aliado-4.htm">
+    <figure>
+      <img src="ico.png">
+      <figcaption>Lorem ipsum</figcaption>
+    </figure>
+  </a>-->
+</div>
+
+</body>
+</html>

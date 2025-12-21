@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="theme-color" content="darkgreen">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="icon" href="ico.png" type="image/png">
+<title>Alvos pegos</title>
+<style>
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #000a00;
+background-image: url('fundo.png');
+  }
+
+/* Container que envolve os itens */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+
+/* Cada item (link com figure) */
+.container a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Aparência das figuras */
+figure {
+  margin: 0;
+  background: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s;
+}
+
+figure:hover {
+  transform: scale(1.03);
+}
+
+/* Imagens ajustáveis */
+figure img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Legenda */
+figcaption {
+  text-align: center;
+  padding: 8px;
+  font-weight: bold;
+}
+nav{
+text-align: center;
+}
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 1px 0;
+  text-align: center;
+  z-index: 500; /* Garante que o header fique acima de outros elementos */
+}
+nav{
+button {
+color:white;
+background-color:green;
+}
+}
+hr {
+color:green;
+background:green;
+}
+</style>
+</head>
+<body>
+<header>
+<div style="display: flex; justify-content: space-between; width: 100%; background-color: green; padding: 8px;">
+  <p style="text-align: left; margin: 0; color:white;">comando verde</p>
+  <p style="text-align: center; margin: 0; color:yellow;">Pegos⚠️</p>
+  <p style="text-align: right; margin: 0; color:white;">comando verde</p>
+</div>
+<nav>
+<a href="index.html"><button>Inicio</button></a>
+<a href="aliados.htm"><button>Contra eles</button></a>
+<a href="alvos.htm"><button>Ainda alvos</button></a>
+</nav>
+</header>
+<hr>
+<div class="container">
+  <a href="pegos/pego-1.htm">
+    <figure>
+      <img src="https://s2-g1.glbimg.com/zqWAy2r0DfVoqiQ5TqAl39HOb_0=/952x0:1920x1080/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/p/o/aXBLUfQ7O7AOpBobf4IA/dois.jpg">
+      <figcaption>Marreta</figcaption>
+    </figure>
+  </a>
+
+  <a href="pegos/pego-2.htm">
+    <figure>
+      <img src="https://odia.ig.com.br/_midias/jpg/2023/06/20/1200x1920/1_sam_da_caico-29502938.jpeg?6491ea32d422d">
+      <figcaption>San da caico</figcaption>
+    </figure>
+  </a>
+
+  <a href="pegos/pego-3.htm">
+    <figure>
+      <img src="https://cdn.folhadoestado.com.br/storage/webdisco/2025/10/14/1200x900/07e275f05b18d35e751304ef663cb484-folhadoestado-com-br.jpg">
+      <figcaption>Boré</figcaption>
+    </figure>
+  </a>
+
+  <a href="pegos/pego-4.htm">
+    <figure>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiMh26N6U9u8LS2-K3fyZgsozo-KMLB2nhBXSufBQehA&s=10">
+      <figcaption>Rafael Pulgão</figcaption>
+    </figure>
+  </a>
+
+<a href="pegos/pego-5.htm">
+    <figure>
+      <img src="https://s2-g1.glbimg.com/3wlyQmYzC1b-52zr21BjOV4s-u8=/0x0:316x436/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/f/4/YDnlDQSEaZr93RkeHyRA/whatsapp-image-2025-11-04-at-15.18.10.jpeg">
+      <figcaption>Japinha do CV</figcaption>
+    </figure>
+  </a>
+
+<a href="pegos/pego-6.htm">
+    <figure>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTill2Ykxy_d2_A-GTLI0dt-7vjEXGWGYCRn27fCDbfe0UO_XMVWswWua06&s=10">
+      <figcaption>Girino</figcaption>
+    </figure>
+  </a>
+</div>
+</hr>
+<a href="antigos.htm">Veja pessoas antigas do CV</a>
+</body>
+</html>
