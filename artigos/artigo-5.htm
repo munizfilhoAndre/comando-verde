@@ -1,0 +1,349 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="icon" href="../ico.png" type="image/png">
+<title>TCP vs CV em niteroi</title>
+
+
+
+</head>
+<style>
+
+  .logo-dark-desktop{
+            display:none;
+        }
+        .logo-light-desktop{
+            display:block;
+        }
+        .header-scrolled{
+            min-height: 60px;
+        }
+        @media (min-width:770px){
+            .header-scrolled{
+            
+                transition:0.5s;
+                z-index:50;
+                position:fixed;
+                width:100%;
+                height:0px;
+                left:0;
+                top:-60px;
+                background-color: #095074 !important;
+                background: linear-gradient(0deg, rgb(6 63 92) 0%, rgb(5 66 96) 33%, rgba(9,80,116,1) 100%);
+                opacity:0.97;
+                transition:0.5s;
+                filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.7));
+                animation: header-scrolled 0.5s ease forwards;
+            }
+            .icon-menu{
+                filter:none;
+                }
+            .header-scrolled .icon-menu{
+                filter: grayscale(1) brightness(11.5);
+          
+            }
+            @keyframes header-scrolled{
+                0%{
+                    top:-60px;
+                    height:0px;
+                }
+                100%{
+                    top:0;
+                    height:60px;
+                }
+            }
+            
+            .header-container{
+                padding:0px;
+                width:100%;
+            }
+            .header-scrolled .search-icon-to-change {
+                display:block;
+            }
+            .header-scrolled .area-cliente{
+                display:none !important;
+            }
+            .header-scrolled .logo-dark-desktop{
+                display:block !important;
+            }
+            .header-scrolled .logo-light-desktop{
+                display:none !important;
+            }
+            .header-scrolled .icon_light{
+                max-height: 60px;
+            }
+            .header-scrolled  .a-remove{
+                max-height: 60px;
+            }
+            .header-scrolled .matutagem-do-heki{                
+                display:none;
+            }
+            
+        .header-scrolled .logo-height{
+            height: 70%;
+            
+            filter: blur(50px);
+            animation: logo 0.5s 0.3s ease forwards;
+        }
+        @keyframes logo {
+            0% {
+                filter: blur(50px);
+            }
+            100% {
+                filter: blur(0px);
+            }
+        }
+
+        }
+
+        @media (max-width:769px){
+        .header-container{
+            background: transparent !important;
+            z-index:9999;
+            width:100%;
+            position:fixed;
+            top:0;
+            transition:0.5s;
+            padding:0px;
+        }
+        .icon-menu{
+            filter: grayscale(1) brightness(11.5) !important;
+        }
+        .materia-inside-mobile-overlay {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.8) 74%, #000000 100%) !important;
+        }
+        .header{
+            transition:0.5s;
+            background: transparent !important;
+        }
+        .header img{
+            filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.25));
+        }
+        .header-scrolled{
+            transition:0.5s;
+            z-index:9999;
+            /* position:fixed; */
+            top:0;
+            background-color: #095074 !important;
+            background: linear-gradient(0deg, rgb(6 63 92) 0%, rgb(5 66 96) 33%, rgba(9,80,116,1) 100%);
+            opacity:0.98;
+            filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.7));
+        }
+    }
+body {
+  background-color: #000a00;
+color: white;
+background-image: url('artigo.png');
+}
+img {
+width: 100%;
+height: auto;
+}
+h1,h2{
+color: orange;
+}
+a{
+color: lightblue;
+}
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 1px 0;
+  text-align: center;
+  z-index: 500; /* Garante que o header fique acima de outros elementos */
+}
+.materia-inside-social-icons img {
+    height: 23px;
+    margin-left: 6px;
+}
+    .footer {
+      color: red;
+      text-align: center;
+      border-top: 2px solid #ffffff;
+      margin-top: 20px;
+      padding-top: 10px;
+      font-weight: bold;
+    }
+    footer{
+    height: 25vh;
+    background-color: #056690;
+    width: 100%;
+    padding: 0px !important;
+    margin: 0px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-social-text{
+    color: white;
+    font-size: 1.4em;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 1em;
+}
+.footer-social-icons{
+    margin-top:1em;
+    
+}
+.footer-social-icons img{
+    max-height: 40px;
+    margin-left: 15px;
+}
+.footer-copyright{
+    font-size:0.7em;
+    color:#fff;
+    margin-top:2em;
+    text-align: center;
+}
+nav{
+button {
+color:white;
+background-color:green;
+}
+}
+  </style>
+</head>
+<body>
+<header>
+<div style="display: flex; justify-content: space-between; width: 100%; background-color: green; padding: 8px;">
+  <p style="text-align: left; margin: 0;">comando verde</p>
+  <p style="text-align: right; margin: 0;">comando verde</p>
+</div>
+<nav>
+<a href="../index.html"><button>Voltar</button></a>
+</nav>
+</header>
+                                            <span style="margin-left:1em; width:100%;">por: Mauro Touguinhó
+                        <div class="materia-inside-author-date"
+                            style="display: flex;justify-content: space-between;align-items: flex-end;">
+                            <span>
+                                28 de novembro de 2025                            </span>
+                            <span style="font-size:8px;">
+                                As duas principais facções criminosas do estado disputam territórios em Niterói - Fotos: Reprodução                            </span>
+                        </div>
+                    </span>
+                </div>
+                            </div>
+        </div>
+        <script>
+            const shareData = {
+                title: 'Niterói sob ataque: TCP tenta nova invasão e intensifica disputa com o CV',
+                text: 'Olha essa notícia aqui no A Tribuna RJ!',
+                url: location.href
+            }
+
+            function share(e) {
+                navigator.share(shareData)
+            }
+        </script>
+        <div class="row materia-box-mobile" style="margin-top:1em;">
+            <div class="col-12 materia-inside-date materia-desktop d-md-flex justify-content-between"><span><span style="font-weight:600">Por: </span>Mauro Touguinhó <span style="margin-left:1.8em;font-weight:600">Data da Publicação:</span> 28 de novembro de 2025</span><span class="materia-inside-social-icons"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fatribunarj.com.br%2Fmateria%2Fniteroi-sob-ataque-tcp-tenta-nova-invasao-e-intensifica-disputa-com-o-cv" target="_blank"><img src="https://atribunarj.com.br/assets/facebook-desktop.svg" alt="Facebook"></a><a href="https://twitter.com/intent/tweet?url=https://atribunarj.com.br/materia/niteroi-sob-ataque-tcp-tenta-nova-invasao-e-intensifica-disputa-com-o-cv&text=Niterói sob ataque: TCP tenta nova invasão e intensifica disputa com o CV" target="_blank"><img src="https://atribunarj.com.br/assets/twitter-desktop.svg" alt="Twitter"></a><a href="#" onclick="share();"><img src="https://atribunarj.com.br/assets/instagram-desktop.svg" alt="Instagram"></a></span></div><div class="materia-desktop" style="background-color:#00A0DA; width:100%;height:2px; margin-bottom:1em;margin-top:0.5em;"></div>            <div class="materia-inside-mobile-border">
+                <div class="col-12 materia-desktop materia-inside-feature-image" style="background-image:url('https://cdn.atribunarj.com.br/images/2025/11/28/whatsapp-image-2025-11-28-at-193823-28-11-2025-19-39-22-vlr2r.webp');background-size:cover;background-position:center;"></div>
+                        <figcaption style="font-size: 11px;display: flex;justify-content: flex-end;" class="no-mobile">As duas principais facções criminosas do estado disputam territórios em Niterói - Fotos: Reprodução</figcaption><div class="col-12 materia-inside-content mt-md-4 p-md-0" style="overflow-wrap: anywhere;">				    <div class="no-desktop" style="text-align:center; margin-bottom:1em;">
+        <img src="https://cdn.atribunarj.com.br/images/2025/11/28/whatsapp-image-2025-11-28-at-193823-28-11-2025-19-39-22-vlr2r.webp" 
+             alt="Imagem destacada" 
+             style="width:100%; height:auto; max-height:320px; 
+                    object-fit:contain; margin:0 auto; display:block;
+                    border-radius:5px; 
+                    border:1px solid #ddd; 
+                    box-shadow:0 2px 6px rgba(0,0,0,0.08);" />
+    </div>
+
+				<p>Câmeras de vigilância registraram, na sexta-feira (28), a chegada de um grupo de seis homens armados ao Morro do Estado, na Região Central de Niterói. Nas imagens, os suspeitos descem de dois veículos na Rua Doutor Araújo Pimenta e seguem pelas escadarias em direção à comunidade, por volta de 0h29.</p><div style='text-align:center;margin:10px 0;'><a href='https://niteroi.rj.gov.br/niteroi452anos/' target='_blank'><img src='https://atribunarj.com.br/uploads/files/2025/02/15/anuncio-1.jpeg'></a></div><p>Segundo as primeiras informações, os invasores seriam ligados ao Terceiro Comando Puro (TCP) e teriam como alvo uma área dominada pelo Comando Vermelho (CV), indicando uma possível tentativa de tomada de território.</p><div style='text-align:center;margin:10px 0;'><a href='#' target='_blank'><img src='https://atribunarj.com.br//uploads/anuncios/2025/06/ATribuna_on-line.jpg'></a></div><p>Moradores do Ingá relataram ter ouvido diversos disparos durante a madrugada. Apesar disso, o comandante do 12º BPM, coronel Leonardo Oliveira, afirmou que não houve confirmação oficial dos tiros. "Recebemos denúncia de tiros, mas não constatamos nada até o momento", disse o oficial.</p><p>A Polícia Civil analisa imagens para identificar o veículo, sua rota e os integrantes do grupo. Os agentes buscam outras câmeras da região que possam ajudar a rastrear a movimentação dos criminosos antes e depois da ação.</p><p>&nbsp;</p><div class="raw-html-embed"><blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-permalink="https://www.instagram.com/reel/DRmxNRLjc72/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DRmxNRLjc72/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver essa foto no Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DRmxNRLjc72/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Uma publicação compartilhada por A Tribuna (@atribunarj)</a></p></div></blockquote>
+<script async="" src="//www.instagram.com/embed.js"></script></div><p>&nbsp;</p><p>&nbsp;</p><p><strong>Episódio ocorre após conflitos no Fonseca e Preventório</strong></p><p>A movimentação criminosa acontece quatro dias após a Polícia Militar realizar operação no Fonseca, após denúncias de tentativas de invasão de comunidades por criminosos do TCP. Segundo Leonardo de Oliveira, após receberem informações sobre homens armados na Comunidade da Palmeira, agentes iniciaram monitoramento e acionaram o Grupamento de Ações Táticas (GAT).&nbsp;</p><p>Os PMs foram recebidos a tiros, dando início a um confronto. Dois suspeitos foram presos. De acordo com a PM, eles migraram de Irajá, no Rio de janeiro. A dupla estavam com dois fuzis, munições e granadas.&nbsp;</p><p>A operação se estendeu por outras comunidades consideradas estratégicas. “Estamos com a região ocupada”, afirmou o coronel, reforçando que as equipes permanecem nos acessos para evitar avanços de facções rivais.</p><p>&nbsp;</p><figure class="image"><img style="aspect-ratio:543/500;" src="https://cdn.atribunarj.com.br/images/2025/11/28/whatsapp-image-2025-11-26-at-143408-_1_-28-11-2025-19-19-39-udgkr.webp" width="543" height="500"><figcaption><strong>PMs patrulham comunidade após troca de tiros — Foto: PMERJ</strong></figcaption></figure><p>&nbsp;</p><p>Na madrugada de terça-feira (24), o Morro do Preventório, em Charitas, amanheceu ocupado pelo 12º BPM, que buscava conter a atuação de traficantes, localizar barricadas, cumprir mandados e identificar veículos roubados.</p><p>A ação foi desencadeada após relatos de intensa troca de tiros durante a noite anterior. Segundo moradores, criminosos do TCP teriam tentado invadir o Preventório, gerando pânico e obrigando famílias a permanecerem dentro de casa até que os confrontos cessassem. Ainda na noite dos confrontos, um homem, atingido por tiros, foi encontrado sem vida.&nbsp;</p><p>&nbsp;</p><div class="raw-html-embed"><blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-permalink="https://www.instagram.com/reel/DRehCAVkko6/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DRehCAVkko6/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver essa foto no Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DRehCAVkko6/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Uma publicação compartilhada por A Tribuna (@atribunarj)</a></p></div></blockquote>
+<script async="" src="//www.instagram.com/embed.js"></script></div><p>&nbsp;</p><p>O Jornal A Tribuna conversou com o advogado criminalista e especialista em Segurança Pública Marcos Espínola, que analisou a ofensiva do TCP e o atual cenário do crime organizado na cidade. Segundo ele, a disputa vista em Niterói reflete um movimento mais amplo no estado:</p><p>“Quando a polícia enfraquece uma facção, outra tende a avançar. Essa é a dinâmica do crime organizado. O Comando Vermelho tem sido alvo de operações recentes; naturalmente, o TCP e até milícias passam a ocupar espaços deixados”, afirmou.</p><p>Espínola explica que o Rio vive um período em que o crime deixou de se concentrar apenas no varejo de drogas e passou a operar a partir de domínio territorial, o que intensifica conflitos:</p><p>“Acabou aquela ideia de que o criminoso saía rapidamente da comunidade para praticar roubos. Hoje a lógica é territorial. Quem domina o território domina a economia criminal — drogas, extorsões, serviços clandestinos, circulação de moradores”.</p><p>&nbsp;</p><figure class="image"><img style="aspect-ratio:800/412;" src="https://cdn.atribunarj.com.br/images/2025/11/28/mapa-grupos-armados-qmsvw1kkz91y37p98gwggnf7ctejfy1mrsowc36cy0-28-11-2025-19-25-28-17dwr.webp" width="800" height="412"><figcaption><strong>Niterói no Mapa dos Grupos Armados. Foto: reprodução/Fogo Cruzado</strong></figcaption></figure><p>&nbsp;</p><p><strong>Lideranças seguem atuando de dentro das cadeias</strong></p><p>O especialista destaca que o sistema prisional fluminense permanece como um dos principais motores de reorganização das facções.</p><p>“Muita gente acredita que quem está preso no Complexo de Gericinó está neutralizado. Isso não é verdade. As lideranças seguem comandando as ações de dentro das cadeias. Criminosos são arregimentados quando chegam, e quando saem, precisam continuar servindo às facções, porque voltam justamente para territórios dominados por elas.”</p><p>Para ele, retirar lideranças do convívio com a base — inclusive com maior uso de presídios federais — seria um passo importante, mas insuficiente sem mudanças estruturais.</p><p>Espínola defende reformas profundas: “Prendemos o mesmo criminoso 10, 20, 30 vezes. Isso mostra que o sistema não ressocializa. Hoje, a prisão serve para escolarizar ainda mais o sujeito no crime. Precisamos de trabalho, cursos profissionalizantes, apoio psicológico, condições dignas dentro das unidades. Isso não é proteger bandido: é evitar que ele volte pior. A lógica é simples: ressocializar para reduzir reincidência.”</p><p>&nbsp;</p><figure class="image"><img style="aspect-ratio:312/500;" src="https://cdn.atribunarj.com.br/images/2025/11/28/1_marcos_espinola_2025-37002209-28-11-2025-19-07-59-chtdl.webp" width="312" height="500"><figcaption><strong>Marcos Espindola - Foto: Divulgação</strong></figcaption></figure><p>&nbsp;</p><p><strong>Estado ausente e domínio armado presente</strong></p><p>Espínola reforça que o domínio territorial das facções impede o funcionamento básico do Estado: “Quando o criminoso controla o território, ele cobra taxa, impede ambulância de entrar, impede comércio de funcionar e moradores de circular. As pessoas não conseguem nem chamar a polícia sem represália. É uma realidade gravíssima.”</p><p>Para o especialista, a solução passa por uma ação combinada: “Não é só polícia. É educação, saúde, emprego, presença do Estado. Quando todos os serviços entram na comunidade, a facção perde força. É assim que se derruba índices de criminalidade.”</p><p>Ele encerra com um alerta: “A disputa de território no Rio não vai acabar tão cedo. Mas não é impossível reduzir. Com Estado presente, políticas públicas contínuas e sistema prisional que funcione, a realidade pode mudar.”</p></p><div class="col-12p d-flex" style="justify-content:right; cursor:pointer;" onclick="javascript:share();"><img src="https://atribunarj.com.br/assets/share_button.png" /></div>
+                </div>
+            </div>
+                    </div>
+        </div>
+
+        <!-- FIM MATERIA  INÍCIO DOS RELACIONADOS-->
+    <div class="col-12 " style="display: flex;align-items:center; margin-top:3em; margin-bottom: 1em;padding: 0px;">
+        <div class="bar-color-section no-mobile" style="background-color:#00A4D8;"></div>
+        <div class="title-categorie d-flex w-100 align-items-center justify-content-between">
+            <span>Relacionadas</span>
+            <div class="title-line no-desktop" style="background-color:#00A4D8;"></div>
+        </div>
+    </div>
+    <div class="container ">
+
+        <div class="row justify-content-between">
+
+            <div class="col-12 col-md-4 materia-inside-related " style="background-image:url(https://cdn.atribunarj.com.br/images/2025/12/09/whatsapp-image-2025-12-09-at-213126-09-12-2025-21-40-24-rkz8k.webp);">
+                <div class="materia-related-overlay"></div>
+                <div class="materia-inside-related-text-area">
+                    <div>
+                        <a href="https://atribunarj.com.br/materia/pm-que-atirou-contra-o-filho-do-prefeito-de-sao-goncalo-e-autuado"
+                            class="materia-inside-related-title">
+                            PM que atirou contra o filho do prefeito de São Gonçalo é autuado                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-md-4 materia-inside-related " style="background-image:url(https://cdn.atribunarj.com.br/images/2025/12/09/e731aef4-441e-4c2f-a094-b947d2fde7db-09-12-2025-19-36-25-637ba.webp);">
+                <div class="materia-related-overlay"></div>
+                <div class="materia-inside-related-text-area">
+                    <div>
+                        <a href="https://atribunarj.com.br/materia/mulher-furta-caixinha-de-natal-em-lanchonete-no-terminal-de-niteroi"
+                            class="materia-inside-related-title">
+                            Mulher furta caixinha de Natal em lanchonete no Terminal de Niterói                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-md-4 materia-inside-related " style="background-image:url(https://cdn.atribunarj.com.br/images/2025/12/09/t_f42a596a751d46759389c9d54a977db4_name_morte_hemodialise-09-12-2025-18-47-53-171gl.webp);">
+                <div class="materia-related-overlay"></div>
+                <div class="materia-inside-related-text-area">
+                    <div>
+                        <a href="https://atribunarj.com.br/materia/familia-cobra-resultado-do-iml-apos-morte-em-tratamento-de-hemodialise-"
+                            class="materia-inside-related-title">
+                            Família cobra resultado do IML após morte em tratamento de hemodiálise                         </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+<div class="col-12 new-component p-0">
+    <footer class="row">
+        <div class="content">
+            <div class="footer-social-text">Redes Sociais</div>
+            <div class="footer-social-icons">
+                <a href='https://www.instagram.com/atribunarj/' target='_blank'><img src='https://www.atribunarj.com.br/assets/instagram-dark.svg'></a><a href='https://twitter.com/atribunarj' target='_blank'><img src='https://www.atribunarj.com.br/assets/twitter-dark.svg'></a><a href='https://www.youtube.com/@jornalatribuna3933' target='_blank'><img src='https://www.atribunarj.com.br/assets/youtube-dark.svg'></a><a href='https://www.facebook.com/atribunarj' target='_blank'><img src='https://www.atribunarj.com.br/assets/facebook-dark.svg'></a>            </div>
+            <div class="footer-copyright">Copyright &copy; A Tribuna
+                2025            </div>
+        </div>
+    </footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/popper-utils.min.js" integrity="sha512-tHiiue7+X432Ptc39KOXYgLBZyl0rgwiav1eRAREjNpqGc5fsG28Mfcg7hLMR4CUXOzjEkpdtIosY9alyoCdMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/js/bootstrap.min.js" integrity="sha512-8qmis31OQi6hIRgvkht0s6mCOittjMa9GMqtK9hes5iEQBQE/Ca6yGE5FsW36vyipGoWQswBj/QBm2JR086Rkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- Scripts de footer -->
+<script src="https://atribunarj.com.br/js/footer/ajust_layout.js"></script>
+<script src="https://atribunarj.com.br/js/footer/lazyload-v2.js"></script>
+<script src="https://atribunarj.com.br/js/footer/resize.js"></script>
+<script src="https://atribunarj.com.br/js/footer/start.js"></script>
+<script src="https://atribunarj.com.br/js/footer/tribuna_play.js"></script>
+
+<script src="https://atribunarj.com.br/wp_functions.js"></script>
+<script>
+    const xhrVisits = new XMLHttpRequest();
+    xhrVisits.open("GET", 'https://atribunarj.com.br/api/view/?materia=292619')
+    xhrVisits.send()
+</script>
+ </div>
+</div>
+</div>
+
+         <!-- jkl -->
+
+         <!-- Aqui começa o footer 123-->
+      </body>
+      </html>
