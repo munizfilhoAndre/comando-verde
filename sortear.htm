@@ -13,7 +13,7 @@
     white-space: pre-line;
   }
 body {
-background-image: url('https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyMm04YTJ4Nmc1Y3czaG9vZDRweXo1MWg5dTM2aXpqeXd6ZHpidzE1MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/26BRyql7J3iOx875u/giphy.gif'), url('troll.png');
+background-image: url('troll.png');
   background-color: #000a00;
 color: white;
 }
@@ -150,79 +150,66 @@ color:yellow;
 <body>
 <h1>Sorteie um vagabundo</h1>
 
-<p>
-  Entre com o valor minimo 
-  <input type="number" id="minimo">
-</p>
+<div class="controles">
+        <label>Mín: <input type="number" id="minimo" value="1"></label>
+        <label>Máx: <input type="number" id="maximo" value="8"></label>
+        <button onclick="sorteio()">Sortear Alvo</button>
+    </div>
 
-<p>
-  Entre com o valor maximo 
-  <input type="number" id="maximo">
-</p>
+    <div id="resultado-container">
+        <h2 id="posicao">n° -</h2>
+        <h2 id="nome">Aguardando...</h2>
+        <h2 id="media">-%</h2>
+    </div>
 
-<button class="btn btn-2 btn-sep icon-cart" onclick="sorteio()">Sortear</button>
-<center>
-</p><h2 id="resultado">( )</h2>
-</center>
-<script>
-function sorteio() {
+    <table>
+        <tr>
+            <th>n°</th>
+            <th>Alvos</th>
+            <th>Média</th>
+        </tr>
+        <tr><td>1</td><td>Doca</td><td>100%</td></tr>
+        <tr><td>2</td><td>Sardinha</td><td>96%</td></tr>
+        <tr><td>3</td><td>Pézão</td><td>91,25%</td></tr>
+        <tr><td>4</td><td>Penelope</td><td>81,5%</td></tr>
+        <tr><td>5</td><td>Abelha</td><td>86%</td></tr>
+        <tr><td>6</td><td>Pedro Bala</td><td>85,5%</td></tr>
+        <tr><td>7</td><td>Gadernal</td><td>96,25%</td></tr>
+        <tr><td>8</td><td>BMW</td><td>91,25%</td></tr>
+    </table>
 
-  const min = parseInt(document.getElementById("minimo").value);
-  const max = parseInt(document.getElementById("maximo").value);
+    <script>
+    function sorteio() {
+        const min = parseInt(document.getElementById("minimo").value);
+        const max = parseInt(document.getElementById("maximo").value);
 
-  // Gera número aleatório entre min e max (inclusive)
-  const sort = Math.floor(Math.random() * (max - min + 1)) + min;
+        // Banco de dados (Dicionário)
+        const dadosAlvos = {
+            1: { nome: "Doca", media: "100%" },
+            2: { nome: "Sardinha", media: "96%" },
+            3: { nome: "Pézão", media: "91,25%" },
+            4: { nome: "Penelope", media: "81,5%" },
+            5: { nome: "Abelha", media: "86%" },
+            6: { nome: "Pedro Bala", media: "85,5%" },
+            7: { nome: "Gadernal", media: "96,25%" },
+            8: { nome: "BMW", media: "91,25%" }
+        };
 
-  document.getElementById("resultado").innerHTML = sort;
-}
-</script>
+        // Gera número aleatório
+        const sort = Math.floor(Math.random() * (max - min + 1)) + min;
 
-<table>
- <tr>
-    <th>n°</th>
-    <th>Alvos</th>
-    <th>Media</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Doca</td>
-    <td>100%</td>
-  </tr>
-<tr>
-    <td>2</td>
-    <td>Sardinha</td>
-    <td>96%</td>
-  </tr>
-<tr>
-    <td>3</td>
-    <td>Pézão</td>
-    <td>91,25%</td>
-  </tr>
-<tr>
-    <td>4</td>
-    <td>Penelope</td>
-    <td>81,5%</td>
-  </tr>
-<tr>
-    <td>5</td>
-    <td>Abelha</td>
-    <td>86%</td>
-  </tr>
-<tr>
-    <td>6</td>
-    <td>Pedro Bala</td>
-    <td>85,5%</td>
-  </tr>
-<tr>
-    <td>7</td>
-    <td>Gadernal</td>
-    <td>96,25%</td>
-  </tr>
-<tr>
-    <td>8</td>
-    <td>BMW</td>
-    <td>91,25 %</td>
-  </tr>
-</table>
+        // Atualiza o HTML com base no sorteio
+        if (dadosAlvos[sort]) {
+            document.getElementById("posicao").innerHTML = "Posição: " + sort;
+            document.getElementById("nome").innerHTML = "Alvo: " + dadosAlvos[sort].nome;
+            document.getElementById("media").innerHTML = "Média: " + dadosAlvos[sort].media;
+        } else {
+            document.getElementById("posicao").innerHTML = "n° " + sort;
+            document.getElementById("nome").innerHTML = "Não cadastrado";
+            document.getElementById("media").innerHTML = "-";
+        }
+    }
+    </script>
+
 </body>
 </html>
