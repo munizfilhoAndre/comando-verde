@@ -79,39 +79,6 @@ input {
 }
 
 
-/* Icon separator */
-.btn-sep {
-  padding: 25px 60px 25px 120px;
-}
-
-.btn-sep:before {
-  background: rgba(0,0,0,0.15);
-}
-.btn-2 {
-  background: #2ecc71;
-  color: #fff;
-}
-
-.btn-2:hover {
-  background: #27ae60;
-}
-
-.btn-2:active {
-  background: #27ae60;
-  top: 2px;
-}
-
-.btn-2:before {
-  position: absolute;
-  height: 100%;
-  left: 0;
-  top: 0;
-  line-height: 3;
-  font-size: 140%;
-  width: 60px;
-}
-.icon-cart:before {
-  content: "\f07a";
 }
     .footer {
       color: red;
@@ -125,7 +92,6 @@ nav{
 button {
 color:white;
 background-color:green;
-}
 }
 td, th {
   border: 1px solid #dddddd;
@@ -156,11 +122,9 @@ color:yellow;
         <button onclick="sorteio()">Sortear Alvo</button>
     </div>
 
-    <div id="resultado-container">
-        <h2 id="posicao">n° -</h2>
-        <h2 id="nome">Aguardando...</h2>
-        <h2 id="media">-%</h2>
-    </div>
+<h2>Posição: <spam id="posicao"></spam></h2>
+<h2>Nome: <spam id="nome"></spam></h2>
+<h2>Media: <spam id="media"></spam></h2>
 
     <table>
         <tr>
