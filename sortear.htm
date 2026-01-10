@@ -35,51 +35,7 @@ input {
   width: 50px;
   height: 20px;
 }
-/* General button style */
-.btn {
-  border: none;
-  font-family: 'Lato';
-  font-size: inherit;
-  color: inherit;
-  background: none;
-  cursor: pointer;
-  padding: 25px 80px;
-  display: inline-block;
-  margin: 15px 30px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
-  outline: none;
-  position: relative;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
 
-.btn:after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-/* Pseudo elements for icons */
-.btn:before {
-  font-family: 'FontAwesome';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  position: relative;
-  -webkit-font-smoothing: antialiased;
-}
-
-
-}
     .footer {
       color: red;
       text-align: center;
@@ -92,6 +48,7 @@ nav{
 button {
 color:white;
 background-color:green;
+}
 }
 td, th {
   border: 1px solid #dddddd;
@@ -116,16 +73,16 @@ color:yellow;
 <body>
 <h1>Sorteie um vagabundo</h1>
 
-<div class="controles">
+<div>
         <label>Mín: <input type="number" id="minimo" value="1"></label>
         <label>Máx: <input type="number" id="maximo" value="8"></label>
         <button onclick="sorteio()">Sortear Alvo</button>
     </div>
 
 <h2>Posição: <spam id="posicao"></spam></h2>
-<h2>Nome: <spam id="nome"></spam></h2>
+<h2>Nome: <spam id="nome"></spam></spam>
 <h2>Media: <spam id="media"></spam></h2>
-
+<br>
     <table>
         <tr>
             <th>n°</th>
@@ -164,11 +121,11 @@ color:yellow;
 
         // Atualiza o HTML com base no sorteio
         if (dadosAlvos[sort]) {
-            document.getElementById("posicao").innerHTML = "Posição: " + sort;
-            document.getElementById("nome").innerHTML = "Alvo: " + dadosAlvos[sort].nome;
-            document.getElementById("media").innerHTML = "Média: " + dadosAlvos[sort].media;
+            document.getElementById("posicao").innerHTML = sort;
+            document.getElementById("nome").innerHTML = dadosAlvos[sort].nome;
+            document.getElementById("media").innerHTML = dadosAlvos[sort].media;
         } else {
-            document.getElementById("posicao").innerHTML = "n° " + sort;
+            document.getElementById("posicao").innerHTML = sort;
             document.getElementById("nome").innerHTML = "Não cadastrado";
             document.getElementById("media").innerHTML = "-";
         }
