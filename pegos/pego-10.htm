@@ -1,0 +1,162 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</script>
+
+<title>Anti facções</title>
+
+<style>
+body {
+color: white;
+background-color: #000a00;
+background-image: url('pego.png');
+}
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+img{
+  width: 50vw;  /* 50% da largura da janela do navegador */
+  height: auto; /* Manter a proporção */
+}
+.section {
+      border-top: 2px solid blue;
+      margin-top: 15px;
+      padding-top: 10px;
+}
+        progress {
+            width: 120px; /* Define uma largura para a barra */
+            height: 20px;
+</style>
+</head>
+<body>
+<div class="topnav" style="display: flex; justify-content: space-between; width: 100%;">
+  <a href="../index.html">Lar</a>
+  <a href="../aliados.htm">Aliados</a>
+  <a href="../alvos.htm">Alvos</a>
+  <a class="active" href="../pegos.htm">Pegos</a>
+<p style="color:yellow;">Comando Verde</p>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-start;">
+  <!-- STATUS À ESQUERDA -->
+  <div style="text-align: left; margin: 0;">
+    <!-- Força -->
+    <label for="forca">Força</label><br>
+    <progress id="forca" value="" max="100"></progress>
+    <span id="forca-percent"></span>
+    <br>
+
+    <!-- Resistência -->
+    <label for="resistencia">Resistência</label><br>
+    <progress id="resistencia" value="" max="100"></progress>
+    <span id="resistencia-percent"></span>
+    <br>
+
+    <!-- Inteligência -->
+    <label for="inteligencia">Inteligência</label><br>
+    <progress id="inteligencia" value="" max="100"></progress>
+    <span id="inteligencia-percent"></span>
+    <br>
+
+    <!-- Agilidade -->
+    <label for="agilidade">Agilidade</label><br>
+    <progress id="agilidade" value="" max="100"></progress>
+    <span id="agilidade-percent"></span>
+  
+
+    <!-- Resultado da Média -->
+    <div style="margin-top: 10px;">
+      <p id="resultado"></p>
+    </div>
+<script>
+    // 1. Definição das variáveis (atributos)
+    const forca = 85;
+    const inteligencia = 60;
+    const resistencia = 75;
+    const agilidade = 50;
+
+    // 2. Exibição nos progress bars e com a porcentagem ao lado
+    document.getElementById('forca').value = forca;
+    document.getElementById('forca-percent').textContent = forca + '%';
+
+document.getElementById('inteligencia').value = inteligencia;
+    document.getElementById('inteligencia-percent').textContent = inteligencia + '%';
+
+    document.getElementById('resistencia').value = resistencia;
+    document.getElementById('resistencia-percent').textContent = resistencia + '%';
+
+    document.getElementById('agilidade').value = agilidade;
+    document.getElementById('agilidade-percent').textContent = agilidade + '%';
+
+    // 3. Cálculo da média dos 4 atributos
+    const media = (forca + inteligencia + resistencia + agilidade) / 4;
+
+    // 4. Exibição da média
+    document.getElementById('resultado').textContent = "Média: " + media + "%";
+</script>
+<a href="https://g1.globo.com/google/amp/rj/rio-de-janeiro/noticia/2026/01/29/foragido-por-associacao-ao-trafico-de-drogas-e-preso-em-academia-da-regiao-serrana-do-rj.ghtml">🔍<small>Saiba mais</small></a>
+</div>
+
+  <!-- FIGURA À DIREITA -->
+  <figure style="text-align: center; margin: 0;">
+    <img src="https://pbs.twimg.com/media/G_2fv-KWUAAVm3x?format=jpg&name=900x900" 
+         alt="Apelido" style="width: 150px; border-radius: 8px;">
+    <figcaption>
+      <strong>Drigo/numero 2</strong><br>
+      <small>Rodrigo Duarte Bertanha</small>
+    </figcaption>
+  </figure>
+</div>
+
+<div class="section">
+      <h2>Poderes</h2>
+      <ul>
+        <li>Controle Territorial: Distribuição de drogas e a gestão de pontos de venda em cidades estratégicas como Cabo Frio, São Pedro da Aldeia e Arraial do Cabo</li>
+        <li>Logística de Armamentos: coordenava a entrada de armas e munições para manter o domínio sobre facções rivais</li>
+        <li>Poder de Expansão: Atuação direta na invasão de novas áreas, sendo o "braço direito" da cúpula para expandir os negócios na Região dos Lagos</li>
+        <li>Comando Remoto: Mesmo escondido na Região Serrana (Petrópolis), mantinha o controle das operações através de ordens criptografadas</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Personalidade</h2>
+      <ul>
+        <li>Discreto e Calculista:buscava uma vida de "classe média" em Petrópolis para passar despercebido pelos órgãos de inteligência</li>
+        <li>Disciplinado: No momento da prisão, estava em uma academia de ginástica, mantendo uma rotina de cuidados pessoais para não levantar suspeitas de ser um foragido</li>
+        <li>Estrategista: Focado na gestão financeira e na "paz interna" da facção na sua área de atuação, evitando conflitos desnecessários que atraíssem a polícia</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Crimes</h2>
+      <ul>
+        <li>Tráfico de Drogas: Artigo 33 da Lei 11.343/2006</li>
+        <li>Associação para o Tráfico: Liderança em organização criminosa armada</li>
+        <li>Homicídios: executou rivais e de "traidores" dentro da própria hierarquia</li>
+        <li>Porte Ilegal de Arma de Fogo de Uso Restrito: Relacionado ao arsenal utilizado pelos seus subordinados nas invasões de território</li>
+      </ul>
+    </div>
+</body>
+</html>
