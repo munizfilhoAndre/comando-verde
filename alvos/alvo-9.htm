@@ -1,0 +1,173 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="theme-color" content="darkgreen">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</script>
+
+<title>Anti facções</title>
+
+<style>
+body {
+color: white;
+background-color: #000a00;
+background-image: url('alvos.png');
+}
+a {
+color: lightblue;
+}
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+img{
+  width: 50vw;  /* 50% da largura da janela do navegador */
+  height: auto; /* Manter a proporção */
+}
+.section {
+      border-top: 2px solid blue;
+      margin-top: 15px;
+      padding-top: 10px;
+}
+        progress {
+            width: 120px; /* Define uma largura para a barra */
+            height: 20px;
+</style>
+</head>
+<body>
+<div class="topnav" style="display: flex; justify-content: space-between; width: 100%;">
+  <a href="../index.html">Lar</a>
+  <a href="../aliados.htm">Aliados</a>
+  <a href="../alvos.htm">Alvos</a>
+  <a href="../pegos.htm">Pegos</a>
+<p style="color:yellow;">Comando Verde</p>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-start;">
+  <!-- STATUS À ESQUERDA -->
+  <div style="text-align: left; margin: 0;">
+    <!-- Força -->
+    <label for="forca">Força</label><br>
+    <progress id="forca" value="" max="100"></progress>
+    <span id="forca-percent"></span>
+    <br>
+
+    <!-- Resistência -->
+    <label for="resistencia">Resistência</label><br>
+    <progress id="resistencia" value="" max="100"></progress>
+    <span id="resistencia-percent"></span>
+    <br>
+
+    <!-- Inteligência -->
+    <label for="inteligencia">Inteligência</label><br>
+    <progress id="inteligencia" value="" max="100"></progress>
+    <span id="inteligencia-percent"></span>
+    <br>
+
+    <!-- Agilidade -->
+    <label for="agilidade">Agilidade</label><br>
+    <progress id="agilidade" value="" max="100"></progress>
+    <span id="agilidade-percent"></span>
+  
+
+    <!-- Resultado da Média -->
+    <div style="margin-top: 10px;">
+      <p id="resultado"></p>
+    </div>
+<script>
+    // 1. Definição das variáveis (atributos)
+    const forca = 40;
+    const inteligencia = 95;
+    const resistencia = 55;
+    const agilidade = 85;
+
+    // 2. Exibição nos progress bars e com a porcentagem ao lado
+    document.getElementById('forca').value = forca;
+    document.getElementById('forca-percent').textContent = forca + '%';
+
+document.getElementById('inteligencia').value = inteligencia;
+    document.getElementById('inteligencia-percent').textContent = inteligencia + '%';
+
+    document.getElementById('resistencia').value = resistencia;
+    document.getElementById('resistencia-percent').textContent = resistencia + '%';
+
+    document.getElementById('agilidade').value = agilidade;
+    document.getElementById('agilidade-percent').textContent = agilidade + '%';
+
+    // 3. Cálculo da média dos 4 atributos
+    const media = (forca + inteligencia + resistencia + agilidade) / 4;
+
+    // 4. Exibição da média
+    document.getElementById('resultado').textContent = "Média: " + media + "%";
+</script>
+<a href="">🔍<small>Saiba mais</small></a>
+</div>
+
+  <!-- FIGURA À DIREITA -->
+  <figure style="text-align: center; margin: 0;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfTWghEyKc5Hd3VNFSbmipS8Je-Pzvx4vfK_fAAfLzuiQJlgpz_NGvnNSJ&s=10" 
+         alt="Apelido" style="width: 150px; border-radius: 8px;">
+    <figcaption>
+      <strong>Musa do crime</strong><br>
+      <small>Paola Bastos Neiva</small>
+    </figcaption>
+  </figure>
+</div>
+
+<div class="section">
+      <h2>Poderes</h2>
+      <ul>
+        <li>Gestão patrimonial: Capacidade de administrar e ocultar um império de mais de 20 imóveis e veículos de luxo.</li>
+        <li>Lavagem de capitais: Domínio sobre técnicas para transformar dinheiro do tráfico (cerca de R$ 3 milhões) em ativos aparentemente legais.</li>
+        <li>Influência hierárquica: Alto prestígio junto à cúpula do Comando Vermelho, garantindo proteção em áreas de difícil acesso no Rio de Janeiro.</li>
+        <li>Logística interestadual: Poder de operar e coordenar movimentações financeiras entre Goiás, Mato Grosso e Rio de Janeiro.</li>
+        <li>Poder de fachada: Habilidade de utilizar sua imagem de influenciadora para camuflar operações ilícitas e enganar a fiscalização inicial.</li>
+        <li>Rede de Contatos: Acesso direto a advogados e operadores financeiros que auxiliam na manutenção de sua liberdade e dos bens da organização.</li>
+        <li>Comando a distância: Capacidade de liderar células criminosas em Goiânia mesmo estando foragida em outro estado.</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Personalidade</h2>
+      <ul>
+        <li>Estrategista financeira: Foco total na gestão e lavagem de grandes quantias de dinheiro.</li>
+        <li>Perfil ostentação: Necessidade de exibir luxo, joias e um padrão de vida elevado.</li>
+        <li>Frieza emocional: Ausência de empatia, evidenciada pelo envolvimento em crimes violentos contra crianças.</li>
+        <li>Dissimulada: Habilidade em usar as redes sociais para criar uma imagem de "influenciadora" legalista.</li>
+        <li>Adaptável: Capacidade de transitar e se esconder em diferentes estados e contextos criminosos.</li>
+        <li>Articuladora: Facilidade em negociar proteção e logística com a cúpula de grandes facções.</li>
+        <li>Vaidosa: Uso da imagem pessoal e procedimentos estéticos como marca registrada e ferramenta de status.</li>
+        <li>Pragmática: Foco em resultados financeiros e na eficiência das operações ilícitas.</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Crimes</h2>
+      <ul>
+        <li>Lavagem de Dinheiro: Principal operadora financeira do grupo em Goiás, com movimentações milionárias investigadas pela Operação Narke 2.</li>
+        <li>Homicídio: Investigada como coautora ou cúmplice em crimes violentos, incluindo o homicídio de uma criança de 2 anos.</li>
+        <li>Tráfico Interestadual: Ajuda a comandar o tráfico em Goiânia e Mato Grosso à distância</li>
+      </ul>
+    </div>
+</body>
+</html>
