@@ -1,16 +1,114 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="theme-color" content="darkgreen">
-
+<meta name="theme-color" content="lightgreen">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 <link rel="icon" href="ico.png" type="image/png">
-<title>Comando Verde</title>
+<title>Aliados do Verde</title>
 <style>
-  .quebra-linha {
-    white-space: pre-line;
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #000a00;
+background-image: url('fundo.png')
   }
+
+h1{
+color: orange;
+}
+/* Container que envolve os links */
+.container {
+  display: grid;
+  /* Cria colunas que se ajustam sozinhas (mínimo 250px cada) */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; /* Espaço entre os cards */
+  padding: 20px;
+}
+
+/* Remove sublinhado padrão dos links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+figure {
+  margin: 0;
+  background: transparent;
+  border-radius: 0px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  height: 100%; /* Garante que todos tenham a mesma altura */
+  display: flex;
+  flex-direction: column;
+}
+
+figure img {
+  width: auto;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+figcaption {
+  color: yellow;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*destaque*/
+
+.destaque {
+display: grid;
+  /* Cria colunas que se ajustam sozinhas (mínimo 250px cada) */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; /* Espaço entre os cards */
+  padding: 25px;
+}
+
+.destaque a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.destaque figure {
+  margin: 0;
+  background: #f4f4f4;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  height: 100%; /* Garante que todos tenham a mesma altura */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Efeito ao passar o mouse */
+.destaque figure:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Faz a imagem ocupar toda a largura e manter a proporção */
+.destaque figure img {
+  width: auto;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Estilo da legenda */
+.destaque figcaption {
+  padding: 15px;
+  text-align: center;
+color: black;
+  font-weight: bold;
+  font-family: sans-serif;
+  flex-grow: 1; /* Faz o texto preencher o espaço restante */
+}
+
+/*fim do destaque*/
+
 /* início do footer */
 
 footer {
@@ -41,66 +139,9 @@ color:pink;
 }
 
 /* fim do footer */
-	
-body {
-color: white;
-  background-color: #000a00;
-background-image: url('fundo.png');
-}
-h2{
-color: orange;
-}
-h1{
-color: yellow;
-}
-marquee h1{
-color: pink;
-}
-a{
-color: lightblue;
-}
-header {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  padding: 1px 0;
-  text-align: center;
-  z-index: 500; /* Garante que o header fique acima de outros elementos */
-}
-.carousel-container {
-  max-width: 800px;
-  margin: auto;
-  position: relative;
-  overflow: hidden;
-}
 
-.carousel-slide {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-slide img {
-  width: 100%;
-  flex-shrink: 0;
-}
-
-.prev-btn, .next-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.prev-btn {
-  left: 10px;
-}
-
-.next-btn {
-  right: 10px;
+  nav{
+text-align: center;
 }
 header {
   position: sticky;
@@ -120,170 +161,112 @@ background-color:green;
 </head>
 <body>
 <header>
-<div style="display: flex; justify-content: space-between; width: 100%; background-color: green; padding: 5px;">
-  <p style="text-align: left; margin: 0;">comando verde</p>
-  <p style="text-align: right; margin: 0;">comando verde</p>
+<div style="display: flex; justify-content: space-between; width: 100%; background-color: green; padding: 8px;">
+  <p style="text-align: left; margin: 0; color:white;">comando verde</p>
+  <p style="text-align: center; margin: 0;">🇧🇷</p>
+  <p style="text-align: right; margin: 0; color:white;">comando verde</p>
 </div>
 <nav>
-    <a href="aliados.htm"><button>Aliados</button></a>
-    <a href="alvos.htm"><button>Alvos</button></a>
-    <a href="pegos.htm"><button>Pegos☠️</button></a>
+<a href="aliados.htm"><button>Aliados</button></a>
+<a href="alvos.htm"><button>Alvos</button></a>
+<a href="pegos.htm"><button>Pegos☠️</button></a>
 </nav>
 </header>
-<marquee>
-<h1>🖕 Leva seu filhos na escola ao invés de viagens Virginia, 🖕 Você está na minha mira Oruam, 🖕 vão de ferrar machistas e misóginos</h1>
-</marquee>
-	<div style="text-align: right;"><small>Atualizado em 18/3/2026(novo artigo)</small></div>
-
-<table>
-    <h2>Artigos:</h2>
-
-		<a href="artigos/artigo-10.htm" style="text-align: center;">
+<section>
+<h1>Principais assuntos:</h1>
+<div class="destaque">
+  <a href="aliados/aliado-1.htm">
     <figure>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpF7vtasH5v2Yhbt-EcPzlJg2fhOuQ_2EpAkSBWnHMpeRyyacvzL2cKZI&s=10" width=50%; height=auto;>
-<figcaption>Doca reaparece cobrando Capitão da PM</figcaption>
-</figure>
-	</a>
-	
-		<tr>
-		<td>
-		<a href="artigos/artigo-9.htm" style="text-align: center;">
-    <figure>
-      <img src="https://conteudo.imguol.com.br/c/noticias/7a/2023/10/07/pichacoes-na-gardenia-azul-zona-oeste-do-rio-indicam-ocupacao-do-territorio-por-parte-do-comando-vermelho-em-alianca-com-a-milicia-1696694710494_v2_900x506.jpg.webp" width=60%; height=auto;>
-<figcaption>Vários Presos não voltaram para a cadeia depois da saidinha de natal</figcaption>
-</figure>
-		</a>
-	</td>
-	
-	<td>
-<a href="artigos/artigo-6.htm" style="text-align: center;">
-    <figure>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcmGFQCd_dPcgnZHG81I0I6Az9Fe99vw44SQ&usqp=CAU" width=60%; height=auto;>
-<figcaption>Novas operações contra o CV</figcaption>
-</figure>
-</a>
-</td>
-    </tr>
-    <tr>
-<td>
-<a href="artigos/artigo-5.htm" style="text-align: center;">
-    <figure>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3HKX69VJZQ-bVQNVBs_diugVtQgMVJ9pZeA&usqp=CAU" width=60%; height=auto;>
-<figcaption>TCP vs CV em niteroi</figcaption>
-</figure>
-      </a>
-</td>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpF7vtasH5v2Yhbt-EcPzlJg2fhOuQ_2EpAkSBWnHMpeRyyacvzL2cKZI&s=10">
+      <figcaption>Doca reaparece cobrando Capitãoda PM</figcaption>
+    </figure>
+  </a>
+</div>
 
-<td>
-  <a href="artigos/artigo-2.htm" style="text-align: center;">
+<div class="container">
+  <a href="artigos/artigo-10.htm">
     <figure>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhyYZJhsLIr9bKPP06hU39HX7-p22wP8O4ng&usqp=CAU" width=60%; height=auto;>
-<figcaption>Como o CV se espalhou pelo Brasil</figcaption>
-</figure>
-      </a>
-</td>
-</tr>
-
-<tr>
-<td>
-<a href="artigos/artigo-3.htm" style="text-align: center;">
+      <img src="https://conteudo.imguol.com.br/c/noticias/7a/2023/10/07/pichacoes-na-gardenia-azul-zona-oeste-do-rio-indicam-ocupacao-do-territorio-por-parte-do-comando-vermelho-em-alianca-com-a-milicia-1696694710494_v2_900x506.jpg.webp">
+      <figcaption>Varios presos não voltaram da saidinha de natal</figcaption>
+    </figure>
+  </a>
+  <a href="artigos/artigo-9.htm">
     <figure>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV5gh-zuIeaIaZXvK6EtEArEQV9p1PhfIEkhhxuSVz6Q&s=10" width=60%; height=auto;>
-<figcaption>Polícia nega morte japinha do CV</figcaption>
-</figure>
-       </a>
-</td>
- <td>
-            <a href="">
-                <figure>
-                    <figcaption></figcaption>
-                </figure>
-            </a>
-        </td>
-</tr>
-</table>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcmGFQCd_dPcgnZHG81I0I6Az9Fe99vw44SQ&usqp=CAU">
+      <figcaption>Operações contra o CV</figcaption>
+    </figure>
+  </a>
 
-<table>
-    <h2>Outros assuntos:</h2>
-	<tr>
-		<td>
-
-<a href="artigos/artigo-14.htm" style="text-align: center">
+  <a href="artigos/artigo-6.htm">
     <figure>
-      <img src="https://uploads.agencialupa.org/2026/03/imagem_pl_misoginia-834x553.jpeg" width=60%; height=auto;>
-<figcaption>A polêmica Lei Antimissoginia</figcaption>
-</figure>
-	</a>
-       </td>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3HKX69VJZQ-bVQNVBs_diugVtQgMVJ9pZeA&usqp=CAU">
+      <figcaption>TCP vs CV em niteroi</figcaption>
+    </figure>
+  </a>
 
-		<td>
+  <a href="artigos/artigo-5.htm">
+    <figure>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhyYZJhsLIr9bKPP06hU39HX7-p22wP8O4ng&usqp=CAU">
+      <figcaption>Como o CV se espalhou pelo Brasil ?</figcaption>
+    </figure>
+  </a>
+
+  <a href="artigos/artigo-2.htm">
+    <figure>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV5gh-zuIeaIaZXvK6EtEArEQV9p1PhfIEkhhxuSVz6Q&s=10">
+      <figcaption>Polícia nega morte de Japinha do CV</figcaption>
+    </figure>
+  </a>
+</div>
+</section>
+<section>
+<h1>Outros Assuntos:</h1>
+<div class="destaque">
 
 <a href="artigos/artigo-13.htm" style="text-align: center">
     <figure>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvlzMlm3QYxHDP_SeOpZzpWGbTKOomnf8nS8jAKDyh8Q&s=10" width=50%; height=auto;>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvlzMlm3QYxHDP_SeOpZzpWGbTKOomnf8nS8jAKDyh8Q&s=10">
 <figcaption>A polêmica Lei Felca</figcaption>
 </figure>
-	</a>
-       </td>
 
-	</tr>
-
-   <tr>
-       <td>
-<small>(Atualizando)</small>
-        <a href="artigos/artigo-11.htm" style="text-align: center;">
+</div>
+<div class="container">
+<a href="artigos/artigo-14.htm" style="text-align: center">
     <figure>
-      <img src="https://f.i.uol.com.br/fotografia/2026/01/26/176943551269777178eff68_1769435512_3x2_md.jpg" width=60%; height=auto;>
+      <img src="https://uploads.agencialupa.org/2026/03/imagem_pl_misoginia-834x553.jpeg">
+<figcaption>A polêmica Lei Antimissoginia</figcaption>
+</figure>
+	</a>
+
+<a href="artigos/artigo-11.htm" style="text-align: center;">
+    <figure>
+      <img src="https://f.i.uol.com.br/fotografia/2026/01/26/176943551269777178eff68_1769435512_3x2_md.jpg">
 <figcaption>Caso orelha: massacre contra animais</figcaption>
 </figure>
 	</a>
-       </td>
-       <td>
-        <a href="artigos/artigo-12.htm" style="text-align: center;">
+
+
+<a href="artigos/artigo-8.htm" style="text-align: center;">
     <figure>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0OLlJAlxLxOUaPQ7DsuAF7Ei1g4yLQPEnShMYU9zpDg&s=10" width=60%; height=auto;>
-<figcaption>Caso Epstein</figcaption>
-</figure>
-	</a>
-       </td>
-    </tr>
-    <tr>
-        <td>
-            	<a href="artigos/artigo-8.htm" style="text-align: center;">
-    <figure>
-      <img src="https://newr7-r7-prod.web.arc-cdn.net/resizer/v2/GLJQZOU2EJPNROMZWPJ4ZINDRM.jpg?auth=34daaee050ad08ea94198dd45b61976468bd8459c54db41e28a372d262c7d808&width=600&height=403" width=60%; height=auto;>
+      <img src="https://newr7-r7-prod.web.arc-cdn.net/resizer/v2/GLJQZOU2EJPNROMZWPJ4ZINDRM.jpg?auth=34daaee050ad08ea94198dd45b61976468bd8459c54db41e28a372d262c7d808&width=600&height=403">
 <figcaption>Moraes autoriza visita ao bolsonaro no hospital que fara cirurgia</figcaption>
 </figure>
 	</a>
-        </td>
-        <td>
-              <a href="artigos/artigo-7.htm" style="text-align: center;">
+
+<a href="artigos/artigo-7.htm" style="text-align: center;">
     <figure>
-      <img src="https://causaoperaria.org.br/wp-content/uploads/2019/01/bolsonaro_nazista-1024x813.jpg" width=60%; height=auto;>
+      <img src="https://causaoperaria.org.br/wp-content/uploads/2019/01/bolsonaro_nazista-1024x813.jpg">
 <figcaption>Bolsonaro foi preso</figcaption>
 </figure>
       </a>
-        </td>
-        </tr>
-        <tr>
-        <td>
-            <a href="artigos/artigo-4.htm" style="text-align: center;">
+
+<a href="artigos/artigo-4.htm" style="text-align: center;">
     <figure>
-      <img src="https://static.poder360.com.br/2025/01/eduardo-bolsonaro-17-jan-2025-848x477.png" width=60%; height=auto;>
+      <img src="https://static.poder360.com.br/2025/01/eduardo-bolsonaro-17-jan-2025-848x477.png">
 <figcaption>Eduardo Bolsonaro vira reu</figcaption>
 </figure>
       </a>
-        </td>
-        <td>
-            <a href="">
-                <figure>
-                    <figcaption></figcaption>
-                </figure>
-            </a>
-        </td>
-    </tr>
-    
-</table>
+</div>
 <footer>
 	<p><a href="bbébm.htm">&copy;</a> 2026 - Todos os direitos reservados</p>
 	<nav>
