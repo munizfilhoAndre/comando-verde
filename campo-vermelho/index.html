@@ -31,17 +31,6 @@
 		a{
 			color: #bd0707;
 		}
-		.left-side{
-			float: left;			
-			margin: 15px 20px 0 0;
-			width: 200px;
-		}
-		.right-side{
-			border-left: 1px solid #CCC;
-			padding-left: 20px;
-			float: left;
-			width: 340px;
-		}
 		.game-board{
 			margin: 0 auto;
 			width: 145px;
@@ -75,7 +64,6 @@
 <a href="../jogos.htm"><button style="background-color: green; color: white; ">Voltar</button></a>
 </header>
 	<h2>&#x1F4A3; Campo<span style="color:#bd0707"> Vermelho🚩</span> v1.0</h2>
-	<div class="left-side">
 		<button onclick="location.reload();"> Novo jogo </button>
 		<button onclick="finishGame(-1,-1);"> Resolver jogo </button>
 		
@@ -84,8 +72,7 @@
 			<div id="game-result"></div>
 			<table id='game'></table>
 		</div>
-	</div>
-	<div class="right-side" style="display: none;visibility: hidden;">
+	<div style="display: none;visibility: hidden;">
 		<h3>About this version</h3>
 		<ul>
 			<li><b>Author :</b> <a href="https://oussamabenkhiroun.com/" title="Oussama Ben Khiroun" target="_blank"><b>Oussama Ben Khiroun</b></a></li>
