@@ -12,7 +12,7 @@ const theme="url('images/minesweeper.png') "	// theme could be changed with anot
 
 var b = jsboard.board({attach:"game", size:boardSize});
 b.style({borderSpacing: "0px", border:"1px solid #CCC"});
-b.cell("each").style({textIndent:"-9999px", background:theme+"-80px -16px no-repeat", width:"16px", height:"16px", margin:"0", padding:"0"});
+b.cell("each").style({textIndent:"-9999px", background:theme+"-80px -16px no-repeat", width:"32px", height:"32px", margin:"0", padding:"0"});
 
 // setup pieces
 var zero = jsboard.piece({text:"ZR", textIndent:"-9999px", background:theme+"0 0 no-repeat", width:"16px", height:"16px", margin:"0 auto" });
