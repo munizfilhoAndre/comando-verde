@@ -1,0 +1,113 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="darkblue">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="icon" href="../ico.png" type="image/png">
+<title>Jogos</title>
+</head>
+<style>
+.container {
+  display: grid;
+  /* Cria colunas que se ajustam sozinhas (mínimo 250px cada) */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; /* Espaço entre os cards */
+  padding: 20px;
+}
+
+/* Remove sublinhado padrão dos links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+figure {
+  margin: 0;
+  background: transparent;
+  border-radius: 0px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  height: 100%; /* Garante que todos tenham a mesma altura */
+  display: flex;
+  flex-direction: column;
+}
+
+figure:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+figure img {
+  width: auto;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+figcaption {
+  color: yellow;
+  text-align: center;
+  font-weight: bold;
+}
+
+  .quebra-linha {
+    white-space: pre-line;
+  }
+body {
+  background-color: #000a00;
+color: white;
+background-image: url('artigo.png');
+}
+h1,h2{
+color: orange;
+}
+a{
+color: lightblue;
+}
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 1px 0;
+  text-align: center;
+  z-index: 500; /* Garante que o header fique acima de outros elementos */
+}
+    .footer {
+      color: red;
+      text-align: center;
+      border-top: 2px solid #ffffff;
+      margin-top: 20px;
+      padding-top: 10px;
+      font-weight: bold;
+    }
+nav{
+button {
+color:white;
+background-color:green;
+}
+}
+  </style>
+</head>
+<body>
+<header>
+<div style="display: flex; justify-content: space-between; width: 100%; background-color: green; padding: 8px;">
+  <p style="text-align: left; margin: 0;">comando verde</p>
+  <p style="text-align: right; margin: 0;">comando verde</p>
+</div>
+<nav>
+<a href="index.html"><button>Voltar</button></a>
+</nav>
+</header>
+
+ <div class="container">
+  <a href="campo-vermelho/">
+    <figure>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlMjXPvSktv3dr18wviTbQwq3lslEjYUrCPdvDr4picg&s=10">
+      <figcaption>Campo Vermelho(campo minado)</figcaption>
+    </figure>
+  </a>
+</div>
+
+</body>
+</html>
