@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+	
+<div style="display: flex; justify-content: space-between; width: 100%; background-color: green; padding: 8px;">
+  <p style="text-align: left; margin: 0;">comando verde</p>
+  <p style="text-align: right; margin: 0;">comando verde</p>
+</div>
+<nav>
+<a href="jogos.htm"><button>Voltar</button></a>
+</nav>
+	
     <header class="site-header" role="banner">
       <div class="wrap">
         <h1>Campo Vermelho</h1>
@@ -44,62 +53,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script>
   </body>
-</html>		}
-		#remaining-mines{
-			color:#bd0707;
-			font-weight: bold;
-		}
-		#game-result{		
-			font-size: 18px;
-			height: 20px;
-			font-weight: bold;
-			width: 144px;
-			text-align: center;
-			margin-bottom: 10px;
-		}
-		.game-over{
-			color: red;
-		}
-		.game-win{
-			color:green;
-		}
-    </style>   
-</head>
-<body>
-    <header>
-<div style="display: flex; justify-content: space-between; width: 100%; background-color: green; padding: 8px;">
-  <p style="text-align: left; margin: 0;">comando verde</p>
-  <p style="text-align: right; margin: 0;">comando verde</p>
-</div>
-<a href="../jogos.htm"><button style="background-color: green; color: white; ">Voltar</button></a>
-</header>
-	<h2>&#x1F4A3; Campo<span style="color:#bd0707"> Vermelho🚩</span> v1.0</h2>
-		<button onclick="location.reload();"> Novo jogo </button>
-		<button onclick="finishGame(-1,-1);"> Resolver jogo </button>
-		
-		<div class="game-board">
-			<p><span id="remaining-mines"></span> remaining mines</p>
-			<div id="game-result"></div>
-			<table id='game'></table>
-		</div>
-	<div style="display: none;visibility: hidden;">
-		<h3>About this version</h3>
-		<ul>
-			<li><b>Author :</b> <a href="https://oussamabenkhiroun.com/" title="Oussama Ben Khiroun" target="_blank"><b>Oussama Ben Khiroun</b></a></li>
-			<li><b>Language :</b> JavaScript using <a href="https://github.com/danielborowski/jsboard" title="jsboard on GitHub" target="_blank">jsboard</a> library (credits to <a href="https://github.com/danielborowski" title="danielborowski on GitHub" target="_blank">danielborowski</a>)</li>
-			<li><b>Algorithm :</b> Use of recursive grid exploration in case of zero neighbour mines
-			<li><b>Design :</b> Microsoft (Windows XP) using sprites</li>
-			<li><b>Source Code :</b> <a href="https://github.com/oussbenk/minesweeper" title="GitHub Repo" target="_blank">GitHub</a></li>
-			<li><b>License :</b> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-NonCommercial 4.0 International License</a>		
-			&nbsp;<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a></li>
-			</ul>
-		<h3>About Minesweeper</h3>
-		<p><a href="https://en.wikipedia.org/wiki/Minesweeper_(video_game)" title="Minesweeper on Wikipedia" target="_blank">Minesweeper</a> is a single-player puzzle video game. 
-		The objective of the game is to clear a rectangular board containing hidden "mines" or bombs without detonating any of them, with help from clues about the number of neighboring mines in each field <a href="https://en.wikipedia.org/wiki/Minesweeper_(video_game)" title="Minesweeper on Wikipedia" target="_blank">[Wikipedia]</a>.
-		</p>
-	</div>
-	
-	<script src="jsboard.min.js"></script>
-	<script src="minesweeper.js"></script>
-</body>
-</html>
+			  </html>
