@@ -178,6 +178,147 @@ background-color:green;
 <a href="pegos.htm"><button>Pegos☠️</button></a>
 </nav>
 </header>
+	<section>
+	<h1>Vamos votar denovo</h1>
+<h2>Denovo acabou o descanso seu otarios, agora vocês e o admin do site vão meter o pé para a urna, para o bem ou o mal do brasil</h2>
+<p>o admin vai votar denovo nessa colina distante</p>
+<figure>
+<img src="https://cejaescola.com.br/wp-content/uploads/2023/11/Fachada-CENAZA-Site-2.jpg">
+<figcaption>A tão temida escola CEJA de nilopolis <a href="https://cejaescola.com.br/"><small>Ir Para o site</small></a></figcaption>
+</figure>
+<i>RUA PRACINHA WALLACE PAES LEME, 1521 - CENTRO - NILÓPOLIS/RJ </i><a href="https://maps.app.goo.gl/YsY3WQfvSxZegir28"><small>Ver no Maps</small></a>
+<br>
+<p>Veja o quanto ele vai demorar para chegar la denovo digitando sua velocidade media ou veja a velocidade media dele digitando o tempo que demorou/vai demorar para chegar la<p>
+<label>Digite a velocidade media</label>
+<input type="number" id="velocidade">km/h
+<button type="button" onclick="calcularvelocidade()">calcular</button>
+<br>
+Ou
+<br>
+<label>digite o tempo<small>(hora:minuto)</small></label>
+<input type="number" id="hora">:<input type="number" id="minuto"><button type="button" onclick="calculartempo()">calcular</button>
+<br>
+<small>⬇️Resultado⬇️</small>
+<textarea readonly id="saida"></textarea>
+<br>
+
+<script>
+    function calcularvelocidade() {
+    var velocidade = parseFloat(document.getElementById('velocidade').value);
+    var distancia = 4.8;
+    var total = (distancia / velocidade) * 60;
+    
+    // Se o número for inteiro, mostra sem decimais; senão, usa até 1 casa decimal
+    var resultadoFormatado = Number.isInteger(total) ? total : total.toFixed(1);
+    
+   document.getElementById('saida').textContent = 'Você vai demorar ' + resultadoFormatado + ' minutos para chegar nessa jossa';
+}
+
+function calculartempo() {
+var hora = parseFloat(document.getElementById('hora').value) || 0;
+var minuto = parseFloat(document.getElementById('minuto').value) || 0;
+var distancia = 4.8;
+var tempoTotal = hora + (minuto / 60);
+var velocidadeMedia= distancia / tempoTotal;
+
+document.getElementById("saida").textContent="sua velocidade média foi de "+velocidadeMedia.toFixed(1)+"km/h para chegar nessa jossa"
+}
+
+</script>
+<!--Vila São Paulo - 15 - Vila Emil, Mesquita - RJ, 26580-210, estão satisfeitos cidadãos ?-->
+<noscript>conseguiu calcular seu vagabundo ? kkkkkkkkkk</noscript>
+<table>
+<tr><p>Exemplos de velocidade média<p></tr>
+    <tr>
+      <td>Carro</td>
+      <td>30 a 50km/h</td>
+    </tr>
+    <tr>
+      <td>Moto</td>
+      <td>50 a 72km/h</td>
+    </tr>
+    <tr>
+      <td>Ônibus</td>
+      <td>15 a 25km/h</td>
+    </tr>
+    <tr>
+      <td>Caminhada</td>
+      <td>4 a 5km/h</td>
+    </tr>
+    <tr>
+      <td>Bicicleta</td>
+      <td>15 a 20km/h</td>
+    </tr>
+</table>
+<p style="text-align: center">Exemplos de voto</p>
+<div class="destaque">
+<table>
+    <tr><th>Petista</th><th>Esquerda</th></tr>
+    <tr>
+      <td>dep federal</td>
+      <td>6565<small>(Soraya Santos)</small></td>
+    </tr>
+    <tr>
+      <td>dep estadual</td>
+      <td>55???<small><small></td>
+    </tr>
+    <tr>
+      <td>senador 1</td>
+      <td>???<small></small></td>
+    </tr>
+    <tr>
+      <td>senador 2</td>
+      <td>555<small>(Carlos Viana)</small></td>
+    </tr>
+    <tr>
+      <td>governador</td>
+      <td>00<small>(nulo)</small></td>
+    </tr>
+    <tr>
+      <td>Presidente</td>
+      <td>13<small>(Lula)</small></td>
+    </tr>
+</table>
+<table>
+    <tr><th>Bolsonarista</th><th>Direita</th></tr>
+    <tr>
+      <td>dep federal</td>
+      <td>2201<small>(coronel Meira)</small></td>
+    </tr>
+    <tr>
+      <td>dep estadual</td>
+      <td>22190<small>(Marcelo Dino)<small></td>
+    </tr>
+    <tr>
+      <td>senador 1</td>
+      <td>222<small>(Mendonça Filho)</small></td>
+    </tr>
+    <tr>
+      <td>senador 2</td>
+      <td>221<small>(Carol de Toni)</small></td>
+    </tr>
+    <tr>
+      <td>governador</td>
+      <td>22<small>(Ruas)</small></td>
+    </tr>
+    <tr>
+      <td>Presidente</td>
+      <td>22<small>(Flávio Bolsonaro)</small></td>
+    </tr>
+</table>
+</div>
+<p style="text-align: center">Adivinha em como ele vai votar, o voto é secreto, será ?<br>
+<small style="color: green; text-align: center">Está revelado no próprio arquivo</small></p>
+<!--
+deputado federal: 6565(Soraya Santos)
+deputado estadual: 55???(*Não lembro*)
+senador 1: 222(Portinho)
+senador 2: 555(Carlos Viana)
+governador: 00(Nulo)
+presidente: 13(Lula)
+-->
+
+	  </section>
 <section>
 <h1>Principais assuntos:</h1>
 <div class="destaque">
